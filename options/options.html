@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Configuration</title>
+    <script src="options.js"></script>
+  </head>
+  <body>
+    <h1>Configuration</h1>
+    <form id="form">
+      <div>
+        <h2>Repository Information</h2>
+        <div>
+          <label for="repository">Repository name</label>
+          <input type="text" id="repository" value="ohbarye" size="20" />
+        </div>
+        <div>
+          <label for="branch">Branch name</label>
+          <input type="text" id="branch" value="issue-creator" size="30" />
+        </div>
+
+        <h2>Template</h2>
+        <div>
+          <label for="title">Title</label>
+          <input type="text" id="title" value=""size="20" />
+        </div>
+
+        <div>
+          <label for="body">Body</label>
+          <textarea id="body" cols="60" rows="20" ></textarea>
+        </div>
+
+        <div>
+          <label for="assignee">Assignee</label>
+          <input type="text" id="assignee" value="" size="20" />
+        </div>
+
+        <div>
+          <label for="labels">Labels</label>
+          <input type="text" id="labels" value="" size="20" />
+        </div>
+
+        <div>
+          <label for="milestone">Milestone</label>
+          <input type="text" id="milestone" value="" size="20" />
+        </div>
+      </div>
+
+      <input type="submit" value="Save" />
+      <input type="reset" value="Reset" />
+    </form>
+  </body>
+</html>

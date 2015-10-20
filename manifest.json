@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Issue Creator",
+  "description": "This extension helps you to create GitHub issues.",
+  "version": "0.1",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "assets/icon_19.png"
+    },
+    "default_title": "Create new Issue",
+    "default_popup": "popup/popup.html"
+  },
+  "options_page": "options/options.html",
+  "permissions": [
+    "storage"
+  ]
+}
