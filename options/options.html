@@ -2,51 +2,83 @@
 <html>
   <head>
     <title>Configuration</title>
+    <link rel="stylesheet" href="../assets/stylesheets/bootstrap.min.css">
+    <script src="../assets/javascripts/jquery-1.11.3.min.js"></script>
+    <script src="../assets/javascripts/bootstrap.min.js"></script>
     <script src="options.js"></script>
   </head>
   <body>
-    <h1>Configuration</h1>
     <form id="form">
-      <div>
-        <h2>Repository Information</h2>
-        <div>
-          <label for="repository">Repository name</label>
-          <input type="text" id="repository" value="ohbarye" size="20" />
-        </div>
-        <div>
-          <label for="branch">Branch name</label>
-          <input type="text" id="branch" value="issue-creator" size="30" />
-        </div>
-
-        <h2>Template</h2>
-        <div>
-          <label for="title">Title</label>
-          <input type="text" id="title" value=""size="20" />
-        </div>
-
-        <div>
-          <label for="body">Body</label>
-          <textarea id="body" cols="60" rows="20" ></textarea>
-        </div>
-
-        <div>
-          <label for="assignee">Assignee</label>
-          <input type="text" id="assignee" value="" size="20" />
-        </div>
-
-        <div>
-          <label for="labels">Labels</label>
-          <input type="text" id="labels" value="" size="20" />
-        </div>
-
-        <div>
-          <label for="milestone">Milestone</label>
-          <input type="text" id="milestone" value="" size="20" />
-        </div>
+    <div class="container">
+      <div class="row">
+        <h1>Configuration</h1>
+      </div>
+      <div class="row">
+        <input type="submit" value="Save" id="save"  class="btn btn-primary" />
+        <input type="reset" value="Reset" id="reset" class="btn btn-default" />
       </div>
 
-      <input type="submit" value="Save" />
-      <input type="reset" value="Reset" />
+      <div class="row">
+          <div>
+            <h2>Repository Information</h2>
+            <table class="table table-striped table-bordered table-hover table-condensed">
+              <tbody>
+                <tr>
+                  <th>
+                    <label for="repositories">Repository name</label>
+                  </th>
+                  <td>
+                    <textarea id="repositories" cols="30" rows="8" ></textarea>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Template</h2>
+            <table class="table table-striped table-bordered table-hover table-condensed">
+              <tbody>
+                <tr>
+                  <th>
+                    <label for="title">Title</label>
+                  </th>
+                  <td>
+                    <input type="text" id="title" value=""size="20" />
+                  </td>
+                  <th>
+                    <label for="assignee">Assignee</label>
+                  </th>
+                  <td>
+                    <input type="text" id="assignee" value="" size="20" />
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <label for="labels">Labels</label>
+                  </th>
+                  <td>
+                    <input type="text" id="labels" value="" size="20" />
+                  </td>
+                  <th>
+                    <label for="milestone">Milestone</label>
+                  </th>
+                  <td>
+                    <input type="text" id="milestone" value="" size="20" />
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <label for="body">Body</label>
+                  </th>
+                  <td colspan="3">
+                    <textarea id="body" cols="60" rows="15" ></textarea>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </form>
   </body>
 </html>
