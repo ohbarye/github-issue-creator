@@ -22,8 +22,12 @@
         return config[field] = $.trim(inputValue);
       });
       return chrome.storage.local.set(config, function() {
-        return alert('Configurations are saved successfully.');
+        return $('#saved').removeClass('hide');
       });
+    });
+    $('#hide-message').click(function(e) {
+      e.preventDefault();
+      return $('#saved').addClass('hide');
     });
     $('#body').keyup(function() {
       return preview();

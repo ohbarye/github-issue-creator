@@ -18,7 +18,11 @@ $ ->
       config[field] = $.trim(inputValue)
 
     chrome.storage.local.set config, ->
-        alert('Configurations are saved successfully.')
+      $('#saved').removeClass('hide')
+
+  $('#hide-message').click (e) ->
+    e.preventDefault()
+    $('#saved').addClass('hide')
 
   $('#body').keyup ->
     preview()
