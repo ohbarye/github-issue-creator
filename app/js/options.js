@@ -1,16 +1,17 @@
 (function() {
   $(function() {
-    var config, fields;
+    var config, fields, preview, sanitize, unsanitize;
     fields = ['repositories', 'title', 'labels', 'assignee', 'milestone', 'body'];
     config = {};
     chrome.storage.local.get(fields, function(items) {
-      return fields.forEach(function(field) {
+      fields.forEach(function(field) {
         var val;
         val = decodeURIComponent(items[field]);
         return $('#' + field).val(val);
       });
+      return preview();
     });
-    return $('#form').submit(function(e) {
+    $('#form').submit(function(e) {
       e.preventDefault();
       fields.forEach(function(field) {
         var inputValue;
@@ -21,9 +22,35 @@
         return config[field] = $.trim(inputValue);
       });
       return chrome.storage.local.set(config, function() {
-        return alert('Configurations are saved successfully.');
+        return $('#saved').removeClass('hide');
       });
     });
+    $('#hide-message').click(function(e) {
+      e.preventDefault();
+      return $('#saved').addClass('hide');
+    });
+    $('#body').keyup(function() {
+      return preview();
+    });
+    preview = function() {
+      var md;
+      marked.setOptions({
+        langPrefix: ''
+      });
+      md = sanitize($('#body').val());
+      $('#preview').html(marked(md));
+      return $('#preview pre code').each(function(i, elm) {
+        $(elm).text(unsanitize(elm.textContent));
+        hljs.highlightBlock(elm, elm.className);
+        return hljs.initHighlightingOnLoad();
+      });
+    };
+    sanitize = function(html) {
+      return $('<div />').text(html).html().replace(/&gt;/g, ">");
+    };
+    return unsanitize = function(html) {
+      return $('<div />').html(html).text();
+    };
   });
 
 }).call(this);
