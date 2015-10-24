@@ -3,8 +3,11 @@
   <head>
     <title>Configuration</title>
     <link href='../vendor/bootstrap/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='../vendor/highlight/styles/github.css' rel='stylesheet'>
     <script src='../vendor/jquery/jquery.min.js'></script>
     <script src='../vendor/bootstrap/js/bootstrap.min.js'></script>
+    <script src='../vendor/marked/marked.min.js'></script>
+    <script src='../vendor/highlight/highlight.pack.js'></script>
     <script src='../js/options.js'></script>
   </head>
   <body>
@@ -66,8 +69,11 @@
                 <th>
                   <label for='body'>Body</label>
                 </th>
-                <td colspan='3'>
+                <td>
                   <textarea cols='60' id='body' rows='15'></textarea>
+                </td>
+                <td colspan='2'>
+                  <div id='preview'></div>
                 </td>
               </tr>
             </tbody>

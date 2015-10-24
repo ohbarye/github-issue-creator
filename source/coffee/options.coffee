@@ -7,6 +7,8 @@ $ ->
       val = decodeURIComponent items[field]
       $('#'+field).val(val)
 
+    preview()
+
   $('#form').submit (e) ->
     e.preventDefault()
 
@@ -17,3 +19,23 @@ $ ->
 
     chrome.storage.local.set config, ->
         alert('Configurations are saved successfully.')
+
+  $('#body').keyup ->
+    preview()
+
+  preview = ->
+    marked.setOptions
+      langPrefix: ''
+
+    md = sanitize $('#body').val()
+    $('#preview').html marked(md)
+    $('#preview pre code').each (i, elm) ->
+      $(elm).text unsanitize(elm.textContent)
+      hljs.highlightBlock elm, elm.className
+      hljs.initHighlightingOnLoad()
+
+  sanitize = (html) ->
+    $('<div />').text(html).html().replace(/&gt;/g, ">")
+
+  unsanitize = (html) ->
+    $('<div />').html(html).text()

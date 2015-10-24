@@ -3,8 +3,11 @@
   %head
     %title Configuration
     %link{rel: "stylesheet", href: "../vendor/bootstrap/css/bootstrap.min.css"}
+    %link{rel: "stylesheet", href: "../vendor/highlight/styles/github.css"}
     %script{src: "../vendor/jquery/jquery.min.js"}
     %script{src: "../vendor/bootstrap/js/bootstrap.min.js"}
+    %script{src: "../vendor/marked/marked.min.js"}
+    %script{src: "../vendor/highlight/highlight.pack.js"}
     %script{src: "../js/options.js"}
   
   %body
@@ -48,5 +51,7 @@
               %tr
                 %th
                   %label{for: "body"} Body
-                %td{colspan: "3"}
+                %td
                   %textarea#body{cols: "60", rows: "15"}
+                %td{colspan: "2"}
+                  #preview
