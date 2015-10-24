@@ -1,17 +1,13 @@
 {
   "name": "issue-creator",
-  "version": "1.0.0",
-  "description": "A chrome extension to help you to create GitHub issues",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "version": "0.1.0",
+  "description": "Chrome extension to help you to create GitHub issues",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ohbarye/issue-creator.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "ohbarye",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ohbarye/issue-creator/issues"
   },
