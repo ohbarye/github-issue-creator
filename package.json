@@ -17,5 +17,9 @@
     "grunt-contrib-coffee": "^0.13.0",
     "grunt-contrib-haml": "^0.2.0",
     "grunt-contrib-watch": "^0.6.1"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.5",
+    "jquery": "^2.1.4"
   }
 }
