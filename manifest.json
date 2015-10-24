@@ -1,17 +1,17 @@
 {
   "manifest_version": 2,
   "name": "Issue Creator",
-  "description": "This extension helps you to create GitHub issues.",
+  "description": "Create GitHub issues from template.",
   "version": "0.1.0",
   "icons": {
-    //"16": "",
-    //"48": "",
-    //"128": ""
+    "16": "assets/icon_16.png",
+    "48": "assets/icon_48.png",
+    "128": "assets/icon_128.png"
   },
   "browser_action": {
     "default_icon": {
-      "19": "assets/icon_19.png"
-      //"38": "assets/icon_19.png"
+      "19": "assets/icon_19.png",
+      "38": "assets/icon_38.png"
     },
     "default_title": "Create new Issue",
     "default_popup": "popup/popup.html"
