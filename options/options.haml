@@ -2,51 +2,51 @@
 %html
   %head
     %title Configuration
-    %link{rel: "stylesheet", href: "../assets/stylesheets/bootstrap.min.css"}
-    %script{src: "../assets/javascripts/jquery-1.11.3.min.js"}
-    %script{src: "../assets/javascripts/bootstrap.min.js"}
+    %link{rel: "stylesheet", href: "../node_modules/bootstrap/dist/css/bootstrap.min.css"}
+    %script{src: "../node_modules/jquery/dist/jquery.min.js"}
+    %script{src: "../node_modules/bootstrap/dist/js/bootstrap.min.js"}
     %script{src: "options.js"}
   
   %body
     %form{id: "form"}
-    .container
-      .row
-        %h1 Configuration
-      .row
-        %input#save.btn.btn-primary{type: "submit", value: "Save"}
-        %input#reset.btn.btn-default{type: "reset", value: "Reset"}
-      .row
-        %h2 Repository Information
-        %table.table.table-striped.table-bordered.table-hover.table-condensed
-          %tbody
-            %tr
-              %th
-                %label{for: "repositories"} Repository name
-              %td
-                %textarea{id: "repositories", cols: "30", rows: "8"}
-        %h2 Template
-        %table.table.table-striped.table-bordered.table-hover.table-condensed
-          %tbody
-            %tr
-              %th
-                %label{for: "title"} Title
-              %td
-                %input#title{type: "text", size: "20"}
-              %th
-                %label{for: "assignee"} Assignee
-              %td
-                %input#assignee{type: "text", size: "20"}
-            %tr
-              %th
-                %label{for: "labels"} Labels
-              %td
-                %input#labels{type: "text", size: "20"}
-              %th
-                %label{for: "milestone"} Milestone
-              %td
-                %input#milestone{type: "text", size: "20"}
-            %tr
-              %th
-                %label{for: "body"} Body
-              %td{colspan: "3"}
-                %textarea#body{cols: "60", rows: "15"}
+      .container
+        .row
+          %h1 Configuration
+        .row
+          %input#save.btn.btn-primary{type: "submit", value: "Save"}
+          %input#reset.btn.btn-default{type: "reset", value: "Reset"}
+        .row
+          %h2 Repository Information
+          %table.table.table-striped.table-bordered.table-hover.table-condensed
+            %tbody
+              %tr
+                %th
+                  %label{for: "repositories"} Repository name
+                %td
+                  %textarea{id: "repositories", cols: "30", rows: "8"}
+          %h2 Template
+          %table.table.table-striped.table-bordered.table-hover.table-condensed
+            %tbody
+              %tr
+                %th
+                  %label{for: "title"} Title
+                %td
+                  %input#title{type: "text", size: "20"}
+                %th
+                  %label{for: "assignee"} Assignee
+                %td
+                  %input#assignee{type: "text", size: "20"}
+              %tr
+                %th
+                  %label{for: "labels"} Labels
+                %td
+                  %input#labels{type: "text", size: "20"}
+                %th
+                  %label{for: "milestone"} Milestone
+                %td
+                  %input#milestone{type: "text", size: "20"}
+              %tr
+                %th
+                  %label{for: "body"} Body
+                %td{colspan: "3"}
+                  %textarea#body{cols: "60", rows: "15"}
