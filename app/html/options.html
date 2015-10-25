@@ -39,10 +39,10 @@
                 </div>
               </div>
               <div class='panel-body'>
-                <textarea class='form-control' id='repositories' rows='6'></textarea>
+                <textarea class='form-control repositories' rows='6'></textarea>
               </div>
             </div>
-            <div class='panel panel-default'>
+            <div class='panel panel-default template-1'>
               <div class='panel-heading'>
                 <label for='title'>Issue Template</label>
                 <span class='pull-right'>Register your original GitHub issue template.</span>
@@ -56,20 +56,20 @@
                         <label for='title'>Title</label>
                       </div>
                       <div class='panel-body'>
-                        <input class='form-control' id='title' size='20' type='text'>
+                        <input class='form-control title' size='20' type='text'>
                       </div>
                     </div>
                     <div class='panel panel-default'>
                       <div class='panel-heading'>
                         <label for='body'>Body</label>
-                        <a class='pull-right' href='https://guides.github.com/features/mastering-markdown/' id='markdown-link'>Styling with Markdown is supported.</a>
+                        <a class='markdown-link pull-right' href='https://guides.github.com/features/mastering-markdown/'>Styling with Markdown is supported.</a>
                       </div>
                       <div class='panel-body'>
                         <div class='row'>
                           <div class='col-md-6'>
-                            <textarea class='form-control' id='body' rows='15'></textarea>
+                            <textarea class='form-control body' rows='15'></textarea>
                           </div>
-                          <div class='col-md-6' id='preview'></div>
+                          <div class='preview col-md-6'></div>
                         </div>
                       </div>
                     </div>
@@ -82,7 +82,7 @@
                             <label for='labels'>Labels</label>
                           </div>
                           <div class='panel-body'>
-                            <input class='form-control' id='labels' type='text'>
+                            <input class='form-control labels' type='text'>
                           </div>
                         </div>
                       </div>
@@ -92,7 +92,7 @@
                             <label for='milestone'>Milestone</label>
                           </div>
                           <div class='panel-body'>
-                            <input class='form-control' id='milestone' type='text'>
+                            <input class='form-control milestone' type='text'>
                           </div>
                         </div>
                       </div>
@@ -102,7 +102,76 @@
                             <label for='assignee'>Assignee</label>
                           </div>
                           <div class='panel-body'>
-                            <input class='form-control' id='assignee' type='text'>
+                            <input class='form-control assignee' type='text'>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class='panel panel-default template-2'>
+              <div class='panel-heading'>
+                <label for='title'>Issue Template</label>
+                <span class='pull-right'>Register your original GitHub issue template.</span>
+              </div>
+              <div class='panel-body'>
+                <p>Note: Editing Labels, Milestone, and Assignee is allowed to only collaborators.</p>
+                <div class='row'>
+                  <div class='for-all-developers col-md-10'>
+                    <div class='panel panel-default'>
+                      <div class='panel-heading'>
+                        <label for='title'>Title</label>
+                      </div>
+                      <div class='panel-body'>
+                        <input class='form-control title' size='20' type='text'>
+                      </div>
+                    </div>
+                    <div class='panel panel-default'>
+                      <div class='panel-heading'>
+                        <label for='body'>Body</label>
+                        <a class='markdown-link pull-right' href='https://guides.github.com/features/mastering-markdown/'>Styling with Markdown is supported.</a>
+                      </div>
+                      <div class='panel-body'>
+                        <div class='row'>
+                          <div class='col-md-6'>
+                            <textarea class='form-control body' rows='15'></textarea>
+                          </div>
+                          <div class='preview col-md-6'></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class='for-contributers col-md-2'>
+                    <div class='row'>
+                      <div class='col-md-12 col-xs-4'>
+                        <div class='panel panel-default'>
+                          <div class='panel-heading'>
+                            <label for='labels'>Labels</label>
+                          </div>
+                          <div class='panel-body'>
+                            <input class='form-control labels' type='text'>
+                          </div>
+                        </div>
+                      </div>
+                      <div class='col-md-12 col-xs-4'>
+                        <div class='panel panel-default'>
+                          <div class='panel-heading'>
+                            <label for='milestone'>Milestone</label>
+                          </div>
+                          <div class='panel-body'>
+                            <input class='form-control milestone' type='text'>
+                          </div>
+                        </div>
+                      </div>
+                      <div class='col-md-12 col-xs-4'>
+                        <div class='panel panel-default'>
+                          <div class='panel-heading'>
+                            <label for='assignee'>Assignee</label>
+                          </div>
+                          <div class='panel-body'>
+                            <input class='form-control assignee' type='text'>
                           </div>
                         </div>
                       </div>

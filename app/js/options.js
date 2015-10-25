@@ -28,7 +28,7 @@
         var val;
         val = items[field];
         if (val) {
-          return $('#' + field).val(decodeURIComponent(val));
+          return $('.' + field).val(decodeURIComponent(val));
         }
       });
       return preview();
@@ -37,7 +37,7 @@
       e.preventDefault();
       fields.forEach(function(field) {
         var inputValue;
-        inputValue = $('#' + field).val();
+        inputValue = $('.' + field).val();
         if (field !== 'repositories') {
           inputValue = encodeURIComponent(inputValue);
         }
@@ -59,7 +59,7 @@
         url: location
       });
     });
-    $('#body').keyup(function() {
+    $('.body').keyup(function() {
       return preview();
     });
     preview = function() {
@@ -67,9 +67,9 @@
       marked.setOptions({
         langPrefix: ''
       });
-      md = sanitize($('#body').val());
-      $('#preview').html(marked(md));
-      return $('#preview pre code').each(function(i, elm) {
+      md = sanitize($('.body').val());
+      $('.preview').html(marked(md));
+      return $('.preview pre code').each(function(i, elm) {
         $(elm).text(unsanitize(elm.textContent));
         hljs.highlightBlock(elm, elm.className);
         return hljs.initHighlightingOnLoad();

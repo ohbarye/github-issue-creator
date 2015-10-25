@@ -33,9 +33,9 @@
                   %a{href: "https://github.com/ohbarye/github-issue-creator"} ohbarye/github-issue-creator
                   )
               .panel-body
-                %textarea.form-control#repositories{rows: "6"}
+                %textarea.form-control.repositories{rows: "6"}
 
-            .panel.panel-default
+            .panel.panel-default.template-1
               .panel-heading
                 %label{for: "title"} Issue Template
                 %span.pull-right Register your original GitHub issue template.
@@ -47,16 +47,16 @@
                       .panel-heading
                         %label{for: "title"} Title
                       .panel-body
-                        %input.form-control#title{type: "text", size: "20"}
+                        %input.form-control.title{type: "text", size: "20"}
                     .panel.panel-default
                       .panel-heading
                         %label{for: "body"} Body
-                        %a#markdown-link.pull-right{href: "https://guides.github.com/features/mastering-markdown/"} Styling with Markdown is supported.
+                        %a.markdown-link.pull-right{href: "https://guides.github.com/features/mastering-markdown/"} Styling with Markdown is supported.
                       .panel-body
                         .row
                           .col-md-6
-                            %textarea.form-control#body{rows: "15"}
-                          #preview.col-md-6
+                            %textarea.form-control.body{rows: "15"}
+                          .preview.col-md-6
                   .for-contributers.col-md-2
                     .row
                       .col-md-12.col-xs-4
@@ -64,16 +64,59 @@
                           .panel-heading
                             %label{for: "labels"} Labels
                           .panel-body
-                            %input.form-control#labels{type: "text"}
+                            %input.form-control.labels{type: "text"}
                       .col-md-12.col-xs-4
                         .panel.panel-default
                           .panel-heading
                             %label{for: "milestone"} Milestone
                           .panel-body
-                            %input.form-control#milestone{type: "text"}
+                            %input.form-control.milestone{type: "text"}
                       .col-md-12.col-xs-4
                         .panel.panel-default
                           .panel-heading
                             %label{for: "assignee"} Assignee
                           .panel-body
-                            %input.form-control#assignee{type: "text"}
+                            %input.form-control.assignee{type: "text"}
+
+            .panel.panel-default.template-2
+              .panel-heading
+                %label{for: "title"} Issue Template
+                %span.pull-right Register your original GitHub issue template.
+              .panel-body
+                %p Note: Editing Labels, Milestone, and Assignee is allowed to only collaborators.
+                .row
+                  .for-all-developers.col-md-10
+                    .panel.panel-default
+                      .panel-heading
+                        %label{for: "title"} Title
+                      .panel-body
+                        %input.form-control.title{type: "text", size: "20"}
+                    .panel.panel-default
+                      .panel-heading
+                        %label{for: "body"} Body
+                        %a.markdown-link.pull-right{href: "https://guides.github.com/features/mastering-markdown/"} Styling with Markdown is supported.
+                      .panel-body
+                        .row
+                          .col-md-6
+                            %textarea.form-control.body{rows: "15"}
+                          .preview.col-md-6
+                  .for-contributers.col-md-2
+                    .row
+                      .col-md-12.col-xs-4
+                        .panel.panel-default
+                          .panel-heading
+                            %label{for: "labels"} Labels
+                          .panel-body
+                            %input.form-control.labels{type: "text"}
+                      .col-md-12.col-xs-4
+                        .panel.panel-default
+                          .panel-heading
+                            %label{for: "milestone"} Milestone
+                          .panel-body
+                            %input.form-control.milestone{type: "text"}
+                      .col-md-12.col-xs-4
+                        .panel.panel-default
+                          .panel-heading
+                            %label{for: "assignee"} Assignee
+                          .panel-body
+                            %input.form-control.assignee{type: "text"}

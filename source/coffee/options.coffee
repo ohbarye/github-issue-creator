@@ -10,7 +10,7 @@ $ ->
   chrome.storage.local.get fields, (items) ->
     fields.forEach (field) ->
       val = items[field]
-      $('#'+field).val decodeURIComponent(val) if val
+      $('.'+field).val decodeURIComponent(val) if val
 
     preview()
 
@@ -18,7 +18,7 @@ $ ->
     e.preventDefault()
 
     fields.forEach (field) ->
-      inputValue = $('#'+field).val()
+      inputValue = $('.'+field).val()
       inputValue = encodeURIComponent inputValue if field != 'repositories'
       config[field] = $.trim(inputValue)
 
@@ -34,16 +34,16 @@ $ ->
     location = $(e.currentTarget).attr('href')
     chrome.tabs.create({url: location})
 
-  $('#body').keyup ->
+  $('.body').keyup ->
     preview()
 
   preview = ->
     marked.setOptions
       langPrefix: ''
 
-    md = sanitize $('#body').val()
-    $('#preview').html marked(md)
-    $('#preview pre code').each (i, elm) ->
+    md = sanitize $('.body').val()
+    $('.preview').html marked(md)
+    $('.preview pre code').each (i, elm) ->
       $(elm).text unsanitize(elm.textContent)
       hljs.highlightBlock elm, elm.className
       hljs.initHighlightingOnLoad()
