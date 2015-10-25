@@ -1,4 +1,24 @@
 (function() {
+  var _gaq, ga, s;
+
+  _gaq = _gaq || [];
+
+  _gaq.push(['_setAccount', 'UA-58056432-3']);
+
+  _gaq.push(['_trackPageview']);
+
+  ga = document.createElement('script');
+
+  ga.type = 'text/javascript';
+
+  ga.async = true;
+
+  ga.src = 'https://ssl.google-analytics.com/ga.js';
+
+  s = document.getElementsByTagName('script')[0];
+
+  s.parentNode.insertBefore(ga, s);
+
   $(function() {
     var config, fields, preview, sanitize, unsanitize;
     fields = ['repositories', 'title', 'labels', 'assignee', 'milestone', 'body'];
@@ -29,7 +49,7 @@
       e.preventDefault();
       return $('#saved').addClass('hide');
     });
-    $('a').click(function(e) {
+    $('#markdown-link').click(function(e) {
       var location;
       e.preventDefault();
       location = $(e.currentTarget).attr('href');
