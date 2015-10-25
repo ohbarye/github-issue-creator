@@ -26,8 +26,10 @@
     chrome.storage.local.get(fields, function(items) {
       fields.forEach(function(field) {
         var val;
-        val = decodeURIComponent(items[field]);
-        return $('#' + field).val(val);
+        val = items[field];
+        if (val) {
+          return $('#' + field).val(decodeURIComponent(val));
+        }
       });
       return preview();
     });

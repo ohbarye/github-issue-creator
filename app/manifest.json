@@ -3,6 +3,7 @@
   "name": "Issue Creator",
   "description": "Create GitHub issues from template.",
   "version": "0.1.0",
+  "author": "ohbarye",
   "icons": {
     "16": "images/icon_16.png",
     "48": "images/icon_48.png",

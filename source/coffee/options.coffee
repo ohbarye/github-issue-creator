@@ -9,8 +9,8 @@ $ ->
 
   chrome.storage.local.get fields, (items) ->
     fields.forEach (field) ->
-      val = decodeURIComponent items[field]
-      $('#'+field).val(val)
+      val = items[field]
+      $('#'+field).val decodeURIComponent(val) if val
 
     preview()
 
