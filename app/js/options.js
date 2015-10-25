@@ -29,6 +29,14 @@
       e.preventDefault();
       return $('#saved').addClass('hide');
     });
+    $('a').click(function(e) {
+      var location;
+      e.preventDefault();
+      location = $(e.currentTarget).attr('href');
+      return chrome.tabs.create({
+        url: location
+      });
+    });
     $('#body').keyup(function() {
       return preview();
     });

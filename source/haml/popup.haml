@@ -3,6 +3,7 @@
   %head
     %title Configuration
     %link{rel: "stylesheet", href: "../vendor/bootstrap/css/bootstrap.min.css"}
+    %link{rel: "stylesheet", href: "../css/popup.css"}
     %script{src: "../vendor/jquery/jquery.min.js"}
     %script{src: "../vendor/bootstrap/js/bootstrap.min.js"}
     %script{src: "../js/popup.js"}
@@ -10,4 +11,7 @@
   %body
     .container
       .row
-        #repositories.list-group
+        .col-md-12
+          #options
+            %a{href: "html/options.html"} options
+          #repositories.list-group

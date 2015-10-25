@@ -8,12 +8,8 @@ $ ->
       href += "?title=#{config.title}&labels=#{config.labels}&assignee=#{config.assignee}&milestone=#{config.milestone}&body=#{config.body}"
       $('#repositories').append "<a href='#{href}' class='list-group-item'>#{repo}</a>"
 
-    $('#repositories a').click (e) ->
+    $('a').click (e) ->
       e.preventDefault()
-      repoLocation = $(e.currentTarget).attr('href')
-      chrome.tabs.query {active: true, currentWindow: true}, (tabs) ->
-        if tabs.length
-          chrome.tabs.update tabs[0].id, {url: repoLocation}
-        else
-          chrome.tabs.create({url: repoLocation})
+      location = $(e.currentTarget).attr('href')
+      chrome.tabs.create({url: location})
 

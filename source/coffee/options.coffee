@@ -24,6 +24,11 @@ $ ->
     e.preventDefault()
     $('#saved').addClass('hide')
 
+  $('a').click (e) ->
+    e.preventDefault()
+    location = $(e.currentTarget).attr('href')
+    chrome.tabs.create({url: location})
+
   $('#body').keyup ->
     preview()
 
