@@ -51,7 +51,7 @@
       e.preventDefault();
       return $('#saved').addClass('hide');
     });
-    $('#markdown-link').click(function(e) {
+    $('a').click(function(e) {
       var location;
       e.preventDefault();
       location = $(e.currentTarget).attr('href');

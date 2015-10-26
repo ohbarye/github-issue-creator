@@ -1,17 +1,17 @@
 {
-  "name": "issue-creator",
-  "version": "0.1.0",
-  "description": "Chrome extension to help you to create GitHub issues",
+  "name": "GitHub Issue Creator",
+  "version": "0.1.2",
+  "description": "Chrome extension to create GitHub issues with your original template.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ohbarye/issue-creator.git"
+    "url": "git+https://github.com/ohbarye/github-issue-creator.git"
   },
   "author": "ohbarye",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ohbarye/issue-creator/issues"
+    "url": "https://github.com/ohbarye/github-issue-creator/issues"
   },
-  "homepage": "https://github.com/ohbarye/issue-creator#readme",
+  "homepage": "https://github.com/ohbarye/github-issue-creator#readme",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-coffee": "^0.13.0",

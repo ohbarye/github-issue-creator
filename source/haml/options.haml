@@ -28,7 +28,10 @@
             .panel.panel-default
               .panel-heading
                 %label{for: "repositories"} Repository Information
-                %span.pull-right Register repository names with newline-delimited. (e.g. ohbarye/issue-creator)
+                .pull-right
+                  %span Register repository names with newline-delimited. (e.g.
+                  %a{href: "https://github.com/ohbarye/github-issue-creator"} ohbarye/github-issue-creator
+                  )
               .panel-body
                 %textarea.form-control#repositories{rows: "6"}
 
