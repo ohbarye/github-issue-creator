@@ -21,7 +21,7 @@
 
   $(function() {
     var fields;
-    fields = ['repositories', 'title', 'labels', 'assignee', 'milestone', 'body'];
+    fields = ['repositories', 'title', 'labels', 'assignee', 'milestone', 'body', 'projects'];
     return chrome.storage.local.get(fields, function(config) {
       var ref, repositories;
       repositories = (ref = config.repositories) != null ? ref.split('\n') : void 0;
@@ -29,7 +29,7 @@
         $.each(repositories, function(i, repo) {
           var href;
           href = "https://github.com/" + repo + "/issues/new";
-          href += "?title=" + config.title + "&labels=" + config.labels + "&assignee=" + config.assignee + "&milestone=" + config.milestone + "&body=" + config.body;
+          href += "?title=" + config.title + "&labels=" + config.labels + "&assignee=" + config.assignee + "&milestone=" + config.milestone + "&body=" + config.body + "&projects=" + config.projects;
           return $('#repositories').append("<a href='" + href + "' class='list-group-item'>" + repo + "</a>");
         });
       }
