@@ -41,7 +41,6 @@
         if (field !== 'repositories') {
           inputValue = encodeURIComponent(inputValue);
         }
-        console.log(field + ' ' + $.trim(inputValue));
         return config[field] = $.trim(inputValue);
       });
       return chrome.storage.local.set(config, function() {
