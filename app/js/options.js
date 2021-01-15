@@ -21,7 +21,7 @@
 
   $(function() {
     var config, fields, preview, sanitize, unsanitize;
-    fields = ['repositories', 'title', 'labels', 'assignee', 'milestone', 'body'];
+    fields = ['repositories', 'title', 'labels', 'assignee', 'milestone', 'body','projects'];
     config = {};
     chrome.storage.local.get(fields, function(items) {
       fields.forEach(function(field) {
